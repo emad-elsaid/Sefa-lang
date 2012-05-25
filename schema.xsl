@@ -1,33 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<!-- =========== the document root ============== -->
-	<xsl:template match="/">
-	  <xsl:apply-templates/>
-	</xsl:template>
+<xsl:template match="/">
+  <xsl:apply-templates/>
+</xsl:template>
+
+<xsl:template match="*">
 	
-	<!-- =========== Node Template ============== -->
-	<xsl:template match="*">
+	<xsl:choose>
+		<xsl:when test="name()='a'"><xsl:call-template name="node"><xsl:with-param name="tag">a</xsl:with-param></xsl:call-template></xsl:when>
 		
-		<!-- ====== Get node tag name to $tag varaible ======= -->
-		<xsl:variable name="tag" select="name()" />
+		<xsl:otherwise>
+			<xsl:call-template name="node"><xsl:with-param name="tag" select="name()"></xsl:with-param></xsl:call-template>
+		</xsl:otherwise>
+	</xsl:choose>
 		
-		<!-- === Now create that element with $tag name ==== -->
-		<xsl:element name="{$tag}">
-		
-			<!-- ===== Iterate over the attributes of that node ===== -->
-			<xsl:for-each select="@*">
-				<xsl:variable name="attr" select="name()" />
-				
-				<!-- =========== create that attribute ============== -->
-				<xsl:attribute name="{$attr}">
-					<xsl:value-of select="." />
-				</xsl:attribute>
-				
-			</xsl:for-each>
-			<xsl:apply-templates/>
+	
+</xsl:template>
+	
+<!-- =========== Node Template ============== -->
+<xsl:template name="node">
+	<xsl:param name="tag"></xsl:param>
+	<!-- === Now create that element with $tag name ==== -->
+	<xsl:element name="{$tag}">
+	
+		<!-- ===== Iterate over the attributes of that node ===== -->
+		<xsl:for-each select="@*">
 			
-			
-		</xsl:element>  
-	</xsl:template>
+			<xsl:if test="name()='لون'">
+				<xsl:call-template name="attribute">
+					<xsl:with-param name="attr">color</xsl:with-param>
+				</xsl:call-template>
+			</xsl:if>
+		
+		</xsl:for-each>
+		<xsl:apply-templates/>
+	
+	</xsl:element>  
+</xsl:template>
+
+
+<xsl:template name="attribute">
+
+	<xsl:param name="attr"></xsl:param>
+	<!-- =========== create that attribute ============== -->
+	<xsl:attribute name="{$attr}">
+		<xsl:value-of select="." />
+	</xsl:attribute>
+</xsl:template>
 
 </xsl:stylesheet>

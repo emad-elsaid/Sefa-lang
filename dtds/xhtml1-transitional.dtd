@@ -285,8 +285,8 @@
      title and an optional base element in any order -->
 
 <!ELEMENT head (%head.misc;,
-     ((عنوان, %head.misc;, (base, %head.misc;)?) |
-      (base, %head.misc;, (عنوان, %head.misc;))))>
+     ((title, %head.misc;, (base, %head.misc;)?) |
+      (base, %head.misc;, (title, %head.misc;))))>
 
 <!ATTLIST head
   %i18n;
@@ -298,7 +298,7 @@
        It should be displayed, for example as the page header or
        window title. Exactly one title is required per document.
     -->
-<!ELEMENT عنوان (#PCDATA)>
+<!ELEMENT title (#PCDATA)>
 <!ATTLIST title 
   %i18n;
   id          ID             #IMPLIED
