@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-	<!-- =========== the document root ============== -->
+<!--
+=========================================
+stylesheet to convert arabic XHTML into 
+standard XHTML
+
+Author : Emad Elsaid
+Version : @VERSION
+=========================================
+-->
+
 <xsl:template match="/">
   <xsl:apply-templates/>
 </xsl:template>
@@ -8,8 +17,7 @@
 <xsl:template match="*">
 	
 	<xsl:choose>
-		<xsl:when test="name()='a'"><xsl:call-template name="node"><xsl:with-param name="tag">a</xsl:with-param></xsl:call-template></xsl:when>
-		
+@TAGS
 		<xsl:otherwise>
 			<xsl:call-template name="node"><xsl:with-param name="tag" select="name()"></xsl:with-param></xsl:call-template>
 		</xsl:otherwise>

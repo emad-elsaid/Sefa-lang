@@ -44,7 +44,6 @@ iframe
 img
 input
 ins
-isindex
 kbd
 label
 legend
