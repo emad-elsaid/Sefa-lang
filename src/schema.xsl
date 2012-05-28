@@ -48,13 +48,17 @@ Version : @VERSION
 	</xsl:element>  
 </xsl:template>
 
-
 <xsl:template name="attribute">
 
 	<xsl:param name="attr"></xsl:param>
 	<!-- =========== create that attribute ============== -->
 	<xsl:attribute name="{$attr}">
-		<xsl:value-of select="." />
+		<xsl:choose>
+@VALUES
+			<xsl:otherwise>
+				<xsl:value-of select="." />
+			</xsl:otherwise>
+		</xsl:choose>
 	</xsl:attribute>
 </xsl:template>
 

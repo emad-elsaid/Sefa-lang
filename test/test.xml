@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="../dist/sefa-0.1.xsl"?>
 <صفة>
 <راس>
-	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<وصف مساو-تشعبى="content-type" محتوى="text/html;charset=utf-8" />
 </راس>
 <جسم>
 	<ع1>CSS Basic Elements</ع1>
@@ -73,7 +73,7 @@ all possible HTML Elements are included in this HTML so as to not miss any possi
 			<ف>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui.</ف>
 	 
 			<ف><وسم لاجل="text_field">Text Field:</وسم><سطر />
-			<حقل نوع="text" معرف="text_field" /></ف>
+			<حقل نوع="نص" معرف="text_field" /></ف>
 	 
 			<ف><وسم لاجل="text_area">Text Area:</وسم><سطر />
 			<نص معرف="text_area"></نص></ف>
@@ -93,27 +93,27 @@ all possible HTML Elements are included in this HTML so as to not miss any possi
 			</منتقى></ف>
 	 
 			<ف><وسم لاجل="radio_buttons">Radio Buttons:</وسم><سطر />
-				<حقل نوع="radio" فئة="radio" اسم="radio_button" قيمة="radio_1" /> Radio 1<سطر/>
-					<حقل نوع="radio" فئة="radio" اسم="radio_button" قيمة="radio_2" /> Radio 2<سطر/>
-					<حقل نوع="radio" فئة="radio" اسم="radio_button" قيمة="radio_3" /> Radio 3<سطر/>
+				<حقل نوع="راديو" فئة="radio" اسم="radio_button" قيمة="radio_1" /> Radio 1<سطر/>
+					<حقل نوع="راديو" فئة="radio" اسم="radio_button" قيمة="radio_2" /> Radio 2<سطر/>
+					<حقل نوع="راديو" فئة="radio" اسم="radio_button" قيمة="radio_3" /> Radio 3<سطر/>
 			</ف>
 	 
 			<ف><وسم لاجل="checkboxes">Checkboxes:</وسم><سطر />
-				<حقل نوع="checkbox" فئة="checkbox" اسم="checkboxes" قيمة="check_1" /> Radio 1<سطر/>
-					<حقل نوع="checkbox" فئة="checkbox" اسم="checkboxes" قيمة="check_2" /> Radio 2<سطر/>
-					<حقل نوع="checkbox" فئة="checkbox" اسم="checkboxes" قيمة="check_3" /> Radio 3<سطر/>
+				<حقل نوع="فحص" فئة="checkbox" اسم="checkboxes" قيمة="check_1" /> Radio 1<سطر/>
+					<حقل نوع="فحص" فئة="checkbox" اسم="checkboxes" قيمة="check_2" /> Radio 2<سطر/>
+					<حقل نوع="فحص" فئة="checkbox" اسم="checkboxes" قيمة="check_3" /> Radio 3<سطر/>
 			</ف>
 	 
 			<ف><وسم لاجل="password">Password:</وسم><سطر />
-				<حقل نوع="password" فئة="password" اسم="password" />
+				<حقل نوع="سرى" فئة="password" اسم="password" />
 			</ف>
 	 
 			<ف><وسم لاجل="file">File Input:</وسم><سطر />
-				<حقل نوع="file" فئة="file" اسم="file" />
+				<حقل نوع="ملف" فئة="file" اسم="file" />
 			</ف>
 	 
 	 
-			<ف><حقل فئة="button" نوع="reset" قيمة="Clear" /> <حقل فئة="button" نوع="submit" قيمة="Submit" />
+			<ف><حقل فئة="زر" نوع="اعادة" قيمة="Clear" /> <حقل فئة="button" نوع="ارسال" قيمة="Submit" />
 			</ف>
 	 
 	 

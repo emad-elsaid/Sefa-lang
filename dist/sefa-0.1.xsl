@@ -254,13 +254,63 @@ Version : 0.1
 	</xsl:element>  
 </xsl:template>
 
-
 <xsl:template name="attribute">
 
 	<xsl:param name="attr"></xsl:param>
 	<!-- =========== create that attribute ============== -->
 	<xsl:attribute name="{$attr}">
-		<xsl:value-of select="." />
+		<xsl:choose>
+<xsl:when test="current()='فوق'">above</xsl:when>
+<xsl:when test="current()='الكل'">all</xsl:when>
+<xsl:when test="current()='الى'">auto</xsl:when>
+<xsl:when test="current()='خط-الاساسى'">baseline</xsl:when>
+<xsl:when test="current()='اسفل'">below</xsl:when>
+<xsl:when test="current()='الحدود'">border</xsl:when>
+<xsl:when test="current()='اسفل'">bottom</xsl:when>
+<xsl:when test="current()='صندوق'">box</xsl:when>
+<xsl:when test="current()='زر'">button</xsl:when>
+<xsl:when test="current()='منتصف'">center</xsl:when>
+<xsl:when test="current()='حرف'">char</xsl:when>
+<xsl:when test="current()='فحص'">checkbox</xsl:when>
+<xsl:when test="current()='دائرة'">circle</xsl:when>
+<xsl:when test="current()='اعمدة'">cols</xsl:when>
+<xsl:when test="current()='افتراضى'">default</xsl:when>
+<xsl:when test="current()='قرص'">disc</xsl:when>
+<xsl:when test="current()='ملف'">file</xsl:when>
+<xsl:when test="current()='مجموعات'">groups</xsl:when>
+<xsl:when test="current()='مخفى'">hidden</xsl:when>
+<xsl:when test="current()='hsides'">hsides</xsl:when>
+<xsl:when test="current()='صورة'">image</xsl:when>
+<xsl:when test="current()='ضبط'">justify</xsl:when>
+<xsl:when test="current()='يسار'">left</xsl:when>
+<xsl:when test="current()='lhs'">lhs</xsl:when>
+<xsl:when test="current()='من-اليسار-لليمين'">ltr</xsl:when>
+<xsl:when test="current()='وسط'">middle</xsl:when>
+<xsl:when test="current()='لا'">no</xsl:when>
+<xsl:when test="current()='بدون-اشارة'">nohref</xsl:when>
+<xsl:when test="current()='بدون'">none</xsl:when>
+<xsl:when test="current()='بدون-تظليل'">noshade</xsl:when>
+<xsl:when test="current()='سرى'">password</xsl:when>
+<xsl:when test="current()='مضلع'">poly</xsl:when>
+<xsl:when test="current()='محجوز'">preserve</xsl:when>
+<xsl:when test="current()='راديو'">radio</xsl:when>
+<xsl:when test="current()='مستطيل'">rect</xsl:when>
+<xsl:when test="current()='اعادة'">reset</xsl:when>
+<xsl:when test="current()='rhs'">rhs</xsl:when>
+<xsl:when test="current()='يمين'">right</xsl:when>
+<xsl:when test="current()='صفوف'">rows</xsl:when>
+<xsl:when test="current()='من-اليمين-لليسار'">rtl</xsl:when>
+<xsl:when test="current()='مربع'">square</xsl:when>
+<xsl:when test="current()='ارسال'">submit</xsl:when>
+<xsl:when test="current()='نص'">text</xsl:when>
+<xsl:when test="current()='اعلى'">top</xsl:when>
+<xsl:when test="current()='خال'">void</xsl:when>
+<xsl:when test="current()='vsides'">vsides</xsl:when>
+<xsl:when test="current()='نعم'">yes</xsl:when>
+			<xsl:otherwise>
+				<xsl:value-of select="." />
+			</xsl:otherwise>
+		</xsl:choose>
 	</xsl:attribute>
 </xsl:template>
 
