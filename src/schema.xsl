@@ -35,11 +35,12 @@ Version : @VERSION
 		<!-- ===== Iterate over the attributes of that node ===== -->
 		<xsl:for-each select="@*">
 			
-			<xsl:if test="name()='لون'">
-				<xsl:call-template name="attribute">
-					<xsl:with-param name="attr">color</xsl:with-param>
-				</xsl:call-template>
-			</xsl:if>
+			<xsl:choose>
+@ATTRIBUTES
+				<xsl:otherwise>
+					<xsl:call-template name="attribute"><xsl:with-param name="attr" select="name()"></xsl:with-param></xsl:call-template>
+				</xsl:otherwise>
+			</xsl:choose>
 		
 		</xsl:for-each>
 		<xsl:apply-templates/>
