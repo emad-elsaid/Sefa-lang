@@ -1,15 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="sefa-0.1.xsl"?>
-<صفة>
+<صفة اتجاه="من-اليمين-لليسار">
 <راس>
 	<وصف مساو-تشعبى="content-type" محتوى="text/html;charset=utf-8" />
+	<عنوان>
+		لغة صفة لبناء صفحات المواقع
+	</عنوان>
 </راس>
 <جسم>
-	<ع1>CSS Basic Elements</ع1>
+<وسط>
+	<صورة مصدر="الشعار/الشعار.png" />
+	<ع1>لغة صفة لبناء صفحات الموقع</ع1>
+	<مسطرة />
+	<ر اشارة="https://github.com/blazeeboy/Sefa-lang/zipball/master">تنزيل</ر> |
+	<ر اشارة="https://github.com/blazeeboy/Sefa-lang/issues">أبلغ عن خطأ</ر> |
+	<ر اشارة="https://github.com/blazeeboy/Sefa-lang/wiki">مرجع اللغة</ر> |
+	<ر اشارة="https://github.com/blazeeboy/Sefa-lang/">شفرة اللغة</ر> |
+	<ر اشارة="http://twitter.blazeboy.me">اتصل بالمطور</ر> |
+	<مسطرة />
+</وسط>
 	 
-<ف>The purpose of this HTML is to help determine what default settings are with CSS and to make sure that 
-all possible HTML Elements are included in this HTML so as to not miss any possible Elements when designing a site.</ف>
+<ف>لغة صفة هى لغة برمجة عربية بديلة للغة HTML , لغة صفة هى ترجمة مباشرة للغة HTML و هى مكتوبة بصيغة XML كما تكتب لغة XHTML بالضبط و لكن بدلآ من اسماء الوسوم و الخواص و قيمها بالإنجليزية يتم كتابتها باللغة العربية و يقوم مترجم اللغة بترجمتها عند وصولها لجهاز العميل من الخادم , مترجم اللغة مبرمج بلغة XSL  و هى تعمل فى الخلفية ولا تظهر بتاتآ إلا فى حالة وجود أخطاء فى صيغة الصفحة لتقوم بتنبيهك لتصحيحها.</ف>
 	 
+	 <ع3>مميزات صفة</ع3>
+	<قم>
+		<بند>تكتب باكملها -عدا اول سطرين- باللغة العربية و بذلك لن تجهد نفسك بحفظ اللغة الإنجليزية إذا كنت مبتدئآ</بند>
+		<بند>اللغة تنقل للعميل و بذلك إذا حاول احدهم تفقد شفرة الصفحة سيجد كود سمة منها سيمكن للآخرين تعلمها و الإستفادة من شفرتك و منها ستمنع المخترقين غير العرب من معرفة الثغرات فى شفرتك :)</بند>
+		<بند>يمكنك كتابة الملف بمزيج من لغة صفة و لغة HTML و سيتم ترجمة الصفحة بطريقة صحيحة و بذلك يمكنك نقل مهاراتك من صفة إلى HTML تدريجيآ, حيث يمكنك كتابة وسوم بالعربية ووسوم اخرى بالإنجليزية و كذلك لأسماء الخصائص و قيمها</بند>
+		<بند>اللغة ديناميكة بحيث انه يمكنك ان تغير فى المصدر و تقوم بتجميعها لتلبى إحتياجاتك , أى انك يمكنك ان تصدر نسخة من اللغة تترجم من الفرنسية للإنجليزية أو من أى لغة للإنجليزية بمجرد تغيير ملفات الترجمة بها و عمل تجميع, أى انه إذا كانت لغة الثانية هى الفرنسية مثلآ يمكنك إصدار نسخة من صفة تكتب بالفرنسية لتسهل عليك الأمر.</بند>
+		<بند>اللغة سهلة جدآ للأطفال و بذلك إذا كنت معلمآ فى المدرسة يمكنك تعليم الأطفال لغة صفة أولآ ثم الإنتقال للغة HTML تدريجيآ.
+		</بند>
+	</قم>
+	 
+	 <ع3>كيفية الكتابة بلغة صفة</ع3>
+	 <قم>
+	 	<بند>قم بتنزيل مصدر اللغة 
+	 	<ر اشارة="https://github.com/blazeeboy/Sefa-lang/zipball/master">من هنا</ر>
+	 	</بند>
+	 	<بند>يجب ان يكون جهازم مزود بخادم حيث ان المتصفحات ترفض تحميل ملف المترجم إلا إذا كانت الصفحة تم تحميلها من خادم انترنت, انصح بتنزيل الخادم XAMPP -ابحث فى جوجل عنه -, لمستخدمى لينوكس أعتقد انه يمكنهم تدبر امرهم فى هذا الشأن.
+	 	</بند>
+	 	<بند>قم بنسخ آخر نسخة من مترجم اللغة من المجلد "dist" إلى مشروعك فى الخادم ,الملف يكون بصيغة الإسم التالى "sefa-النسخة.xsl" النسخة = رقم الإصدارة , اكبر رقم هو آخر نسخة.
+	 	</بند>
+	 	<بند>ابدأ بكتابة لغة صفة فى ملف جديد بإسم index.xml فى مجلد الخادم الخاص بك, لنبدأ بالتالى<سطر/>
+	 	<منسق>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;?xml-stylesheet type="text/xsl" href="sefa-0.1.xsl"?&gt;
+&lt;صفة&gt;
+	&lt;راس&gt;
+	&lt;/راس&gt;
+	&lt;جسم&gt;
+	&lt;!-- ملحوظة: يمكنك كتابة جميع اكواد سمة هنا أو حتى فى الرأس --&gt;
+	&lt;/جسم&gt;
+&lt;/صفة&gt;	 	
+	 	</منسق>
+	 	</بند>
+	 	<بند>
+	 	تأكد من ان ثانى سطر يحتوى على الإسم الصحيح لملف مترجم سمة
+	 	</بند>
+	 	<بند>
+	 	و الأن يمكنك ان تفتح الصفحة فى متصفح الإنترنت الخاص بك من العنوان التالى <سطر />
+	 	http://localhost/index.xml
+	 	</بند>
+	 </قم>
+
+<ع3>كيف تدعم صفة</ع3>
+	 <قم>
+	 	<بند>استخدم صفة فى موقعك او جزء منه لتعدم التكنولوجيا العربية بشكل عام
+	 	</بند>
+	 	<بند>قم بتطوير صفة إذا كنت مطورآ أو ابلغ عن أخطاء بها بأقوم بتصحيحها
+	 	</بند>
+	 	<بند>قم بمتابعة مصدر اللغة
+	 	<ر اشارة="https://github.com/blazeeboy/Sefa-lang"> Watch </ر>
+	 	او عمل شوكة منها
+	 	<ر اشارة="https://github.com/blazeeboy/Sefa-lang"> Fork </ر>
+	 	 على موقع github
+	 	</بند>
+ 	</قم>
+ 	
+	 	<مسطرة />	 
+	 <صغير>
+	 يقوم يتطوير صفة <ر اشارة="http://blazeboy.me">عماد السعيد</ر> على تويتر <ر اشارة="http://twitter.blazeboy.me">@blaz_boy</ر>
+	 </صغير>
+	 
+	<مسطرة/>	 
+	<وسط>
+	 <ع1>بقية الصفحة توضح معظم إمكانيات صفة و التى تساوى امكانيات لغة HTML</ع1>
+	 </وسط>
 	<مسطرة/>
 	 
 	<ع1 معرف="headings">Headings</ع1>
@@ -146,14 +222,14 @@ all possible HTML Elements are included in this HTML so as to not miss any possi
 	<صغير><ر اشارة="#wrapper">[top]</ر></صغير>
 	<مسطرة />
 	 
-	<ع1 معرف="misc">Misc Stuff - اختصار, acronym, pre, code, sub, sup, etc.</ع1>
+	<ع1 معرف="misc">Misc Stuff - abbr, acronym, pre, code, sub, sup, etc.</ع1>
 	 
 	<ف>Lorem <مرتفع>superscript</مرتفع> dolor <منخفض>subscript</منخفض> amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. <استشهاد>cite</استشهاد>. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. <مختصر عنوان="National Basketball Association">NBA</مختصر> Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.  <اختصار عنوان="Avenue">AVE</اختصار></ف>
 	 
 	<منسق><ف>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. <مختصر عنوان="National Basketball Association">NBA</مختصر> Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.  <اختصار عنوان="Avenue">AVE</اختصار></ف></منسق>
 	 
 	<اقتباس>
-		"This stylesheet is going to help so freaking much." <سطر />-اقتباس
+		"This stylesheet is going to help so freaking much." <سطر />-blockquote
 	</اقتباس>
 	 
 	<صغير><ر اشارة="#wrapper">[top]</ر></صغير>
