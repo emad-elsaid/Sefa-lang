@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="http://raw.github.com/blazeeboy/Sefa-lang/master/dist/sefa-0.1.xsl"?>
+<?xml-stylesheet type="text/xsl" href="sefa-0.1.xsl"?>
 <صفة>
 <راس>
 	<وصف مساو-تشعبى="content-type" محتوى="text/html;charset=utf-8" />
