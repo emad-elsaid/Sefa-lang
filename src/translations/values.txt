@@ -45,3 +45,4 @@ top = اعلى
 void = خال
 vsides = vsides
 yes = نعم
+triangle = مثلث
